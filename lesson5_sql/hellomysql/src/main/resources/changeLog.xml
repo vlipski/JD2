@@ -1,23 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-<databaseChangeLog
-        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
-
-    <changeSet id="1" author="bob">
-        <createTable tableName="department">
-            <column name="id" type="int">
-                <constraints primaryKey="true" nullable="false"/>
+    <changeSet author="lipski" id="1">
+        <createTable tableName="translation">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints nullable="false" primaryKey="true"/>
             </column>
-            <column name="name" type="varchar(50)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="active" type="boolean"
-            defaultValueBoolean="true"/>
-
+            <column name="EN" type="varchar(50)"/>
+            <column name="RUS" type="varchar(50)"/>
         </createTable>
     </changeSet>
 
+
+    <changeSet author="lipski" id="2">
+        <sql>ALTER TABLE `dictionary`.`translation`
+            ADD UNIQUE INDEX `EN_UNIQUE` (`EN` ASC);
+        </sql>
+    </changeSet>
+    <changeSet author="lipski" id="3">
+        <sql>ALTER TABLE `dictionary`.`translation`
+            CHARACTER SET = utf8 , COLLATE = utf8_unicode_ci ;
+        </sql>
+    </changeSet>
+    <changeSet author="lipski" id="4">
+        <sql>ALTER TABLE `dictionary`.`translation`
+            CHANGE COLUMN `EN` `EN` VARCHAR(50) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ,
+            CHANGE COLUMN `RUS` `RUS` VARCHAR(50) CHARACTER SET 'utf8' COLLATE 'utf8_unicode_ci' NULL DEFAULT NULL ;
+        </sql>
+    </changeSet>
+    <changeSet author="lipski" id="5">
+        <sql>insert into `dictionary`.`translation` (`EN`, `RUS`) values ('hello', 'привет');</sql>
+    </changeSet>
+    <changeSet author="lipski" id="6">
+        <sql>insert into `dictionary`.`translation` (`EN`, `RUS`) values ('car', 'автомобиль');</sql>
+    </changeSet>
+    <changeSet author="lipski" id="7">
+        <sql>insert into `dictionary`.`translation` (`EN`, `RUS`) values ('table', 'стол');</sql>
+    </changeSet>
+    <changeSet author="lipski" id="8">
+        <sql>insert into `dictionary`.`translation` (`EN`, `RUS`) values ('drink', 'пить');</sql>
+    </changeSet>
 </databaseChangeLog>

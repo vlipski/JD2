@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df35efaa-fb10-48d9-8d82-97016f526c51" name="Default Changelist" comment="commit" />
+    <list default="true" id="df35efaa-fb10-48d9-8d82-97016f526c51" name="Default Changelist" comment="commit">
+      <change afterPath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/src/main/java/by/pvt/DemoParsXML.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/src/main/java/by/pvt/dao/WordDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/src/main/java/by/pvt/entity/Word.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/src/main/java/by/pvt/service/WordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/src/main/resources/changeLog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/src/main/resources/changeLog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/target/classes/changeLog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/target/classes/changeLog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lesson5_sql/hellomysql/target/test-classes/my/pv/helloMysqlTestt.class" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/server/target/" />
@@ -38,8 +51,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/main/java/by/pvt/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            <state relative-caret-position="271">
+              <caret line="51" column="49" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="51" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,14 +136,34 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="parent21" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parent21" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parent21" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parent21" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parent21" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parent21" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562413669667" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -212,7 +248,7 @@
     <frame x="-11" y="-11" width="1386" height="788" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984756" visible="true" weight="0.280543" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984756" visible="true" weight="0.28959277" />
       <window_info id="Structure" order="1" sideWeight="0.5015244" side_tool="true" weight="0.26847664" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -357,8 +393,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/main/java/by/pvt/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        <state relative-caret-position="271">
+          <caret line="51" column="49" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="51" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

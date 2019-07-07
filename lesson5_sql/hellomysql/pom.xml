@@ -16,17 +16,17 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.4</version>
         </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.2</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
@@ -45,10 +45,43 @@
                         <phase>process-resources</phase>
                         <configuration>
                             <changeLogFile>src/main/resources/changeLog.xml</changeLogFile>
-                            <url>jdbc:mysql://localhost:3306/hello_mysql?createDatabaseIfNotExist=true&amp;useSSL=false</url>
+                            <url>jdbc:mysql://localhost:3306/dictionary?useUnicode=true&amp;characterEncoding=UTF-8&amp;createDatabaseIfNotExist=true&amp;useSSL=false</url>
                             <username>root</username>
                             <password>Skatina964</password>
                             <driver>com.mysql.jdbc.Driver</driver>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <release>11</release>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>1.18.2</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok-maven-plugin</artifactId>
+                <version>1.18.0.0</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>delombok</goal>
+                        </goals>
+                        <configuration>
+                            <encoding>UTF-8</encoding>
+                            <addOutputDirectory>false</addOutputDirectory>
+                            <sourceDirectory>src/main/java</sourceDirectory>
                         </configuration>
                     </execution>
                 </executions>
